@@ -230,7 +230,7 @@ def main():
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("𝕄𝕀ℝℝ𝕆ℝ 𝔹𝕆𝕋 ℝ𝔼𝕊𝕋𝔸ℝ𝕋𝔼𝔻!\n\n𝐏𝐥𝐞𝐚𝐬𝐞 𝐬𝐭𝐚𝐫𝐭 𝐲𝐨𝐮𝐫 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐬 𝐚𝐠𝐚𝐢𝐧\n\n𝐁𝐎𝐓 𝐎𝐅 𝐁𝐑𝐔𝐂𝐄 𝐌𝐈𝐑𝐑𝐎𝐑\n\n#Rebooted #Updated", chat_id, msg_id)
+        bot.edit_message_text("𝕄𝕀ℝℝ𝕆ℝ 𝔹𝕆𝕋 ℝ𝔼𝕊𝕋𝔸ℝ𝕋𝔼𝔻!\n\n𝐏𝐥𝐞𝐚𝐬𝐞 𝐬𝐭𝐚𝐫𝐭 𝐲𝐨𝐮𝐫 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐬 𝐚𝐠𝐚𝐢𝐧\n\n𝐁𝐎𝐓 𝐎𝐅 𝘁𝗲𝗿𝗺𝗶 𝐌𝐈𝐑𝐑𝐎𝐑\n\n#Rebooted #Updated", chat_id, msg_id)
         osremove(".restartmsg")
 
     start_handler = CommandHandler(BotCommands.StartCommand, start, run_async=True)
