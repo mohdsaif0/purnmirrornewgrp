@@ -20,7 +20,7 @@ from .helper.telegram_helper.button_build import ButtonMaker
 from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, delete, count, leech_settings, search, rss
 
 
-IMAGE_X = "https://te.legra.ph/file/a33fbfd9cd404a3682021.jpg"
+IMAGE_X = "https://te.legra.ph/file/c06acd0e84a64bdc2149e.jpg"
 
 def stats(update, context):
     if ospath.exists('.git'):
@@ -46,29 +46,22 @@ def stats(update, context):
     mem_t = get_readable_file_size(memory.total)
     mem_a = get_readable_file_size(memory.available)
     mem_u = get_readable_file_size(memory.used)
-    stats = f'<b>╭──「☣️ тєямι ѕтαтѕ ☣️」</b>\n' \
-            f'<b>│</b>\n' \
-            f'<b>├⌬ Lᴀsᴛ Cᴏᴍᴍɪᴛ→</b> {last_commit}\n'\
-            f'<b>├⌬ Uᴘᴛɪᴍᴇ→</b> {currentTime}\n'\
-            f'<b>├⌬ OS Uᴘᴛɪᴍᴇ→</b> {osUptime}\n'\
-            f'<b>├⌬ Tᴏᴛᴀʟ Dɪsᴋ→</b> {total}\n'\
-            f'<b>├⌬ Usᴇᴅ→</b> {used}\n'\
-            f'<b>├⌬ Fʀᴇᴇ→</b> {free}\n'\
-            f'<b>├⌬ Uᴘʟᴏᴀᴅ→</b> {sent}\n'\
-            f'<b>├⌬ Dᴏᴡɴʟᴏᴀᴅ→</b> {recv}\n'\
-            f'<b>├⌬ Cᴘᴜ→</b> {cpuUsage}%\n'\
-            f'<b>├⌬ Rᴀᴍ→</b> {mem_p}%\n'\
-            f'<b>├⌬ Dɪsᴋ→</b> {disk}%\n'\
-            f'<b>├⌬ Pʜʏsɪᴄᴀʟ Cᴏʀᴇs→</b> {p_core}\n'\
-            f'<b>├⌬ Tᴏᴛᴀʟ Cᴏʀᴇs→</b> {t_core}\n'\
-            f'<b>├⌬ Sᴡᴀᴘ→</b> {swap_t}\n'\
-            f'<b>├⌬ Usᴇᴅ→</b> {swap_p}%\n'\
-            f'<b>├⌬ Tᴏᴛᴀʟ→</b> {mem_t}\n'\
-            f'<b>├⌬ Fʀᴇᴇ→</b> {mem_a}\n'\
-            f'<b>╰─ Usᴇᴅ→</b> {mem_u}\n'
-    update.effective_message.reply_photo("https://te.legra.ph/file/426b9621c4f8f4141d921.jpg", stats, parse_mode='HTMl')
- 
-
+    stats = f'<b>•• ━━ Termi Mirror Bot ━━ ••</b>\n\n' \
+            f'Rᴜɴɴɪɴɢ Sɪɴᴄᴇ : {currentTime}\n' \
+            f'Sᴛᴀʀᴛᴇᴅ Aᴛ : {last_commit}\n\n' \
+            f'<b>DISK INFO</b>\n' \
+            f'<b><i>Total</i></b>: {total}\n' \
+            f'<b><i>Used</i></b>: {used} ~ ' \
+            f'<b><i>Free</i></b>: {free}\n\n' \
+            f'<b>DATA USAGE</b>\n' \
+            f'<b><i>UL</i></b>: {sent} ~ ' \
+            f'<b><i>DL</i></b>: {recv}\n\n' \
+            f'<b>SERVER STATS</b>\n' \
+            f'<b><i>CPU</i></b>: {cpuUsage}%\n' \
+            f'<b><i>RAM</i></b>: {mem_p}%\n' \
+            f'<b><i>DISK</i></b>: {disk}%\n\n' \
+            f'<b>•• ━ ★彡[ᴍᴀᴅᴇ ᴡɪᴛʜ ʟᴏᴠᴇ ʙʏ terminator]彡★ ━ ••</b>\n\n'
+    update.effective_message.reply_photo("https://te.legra.ph/file/13ccf38062d6a5840b350.jpg", stats, parse_mode='HTMl')
 
 def start(update, context):
     buttons = ButtonMaker()
